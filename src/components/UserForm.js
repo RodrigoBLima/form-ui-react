@@ -75,7 +75,14 @@ export class UserForm extends Component {
             />
           );
       case 4:    
-          return <h1>Success</h1>;
+          return (
+             <Success
+              nextStep={this.nextStep}
+              prevStep={this.prevStep}
+              handleChange={this.handleChange}
+              values={values}
+            />
+          );
     }
   }
 }
