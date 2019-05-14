@@ -63,5 +63,6 @@ const styles={
     button:{
         margin: 15
     }
-};
-export default FormPersonalDetails
+}
+
+export default FormUPersonalDetails

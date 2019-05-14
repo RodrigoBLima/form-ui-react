@@ -50,7 +50,7 @@ export class FormUserDetails extends Component {
     );
   }
 }
-const styles={
+const styles = {
     button:{
         margin: 15
     }
