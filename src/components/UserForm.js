@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import FormUserDetails from './FormUserDetails'
+import React, { Component } from 'react';
+import FormUserDetails from './FormUserDetails';
 
 export class UserForm extends Component {
     
@@ -11,7 +11,7 @@ export class UserForm extends Component {
     occupation: '',
     city: '',
     bio: '',
-    
+  }
     //processo para o proximo passo
     nextStep = () => {
       const { step } = this.state;
@@ -21,7 +21,7 @@ export class UserForm extends Component {
     }
 
       //processo para voltar um passo
-    nextStep = () => {
+    prevStep = () => {
       const { step } = this.state;
       this.setState({
         step: step - 1
@@ -35,14 +35,14 @@ export class UserForm extends Component {
     }
 
     
-  }
+  
  
     render() {
     const {step} = this.state;
     const { firstName, lastName, email, occupation, city, bio } = this.state;
     const values = { firstName, lastName, email, occupation, city, bio }
 
-    switch (key) {
+    switch (step) {
       case 1:
           return(
             <FormUserDetails 
@@ -50,13 +50,13 @@ export class UserForm extends Component {
               handleChange={this.handleChange}
               values={values}
             />
-          )
+          );
       case 2:
-          return <h1>FormUserDetails</h1>
+          return <h1>FormUserDetails</h1>;
       case 3:
-          return <h1>Confirm</h1>
+          return <h1>Confirm</h1>;
       case 4:    
-          return <h1>Success</h1>  
+          return <h1>Success</h1>;
     }
   }
 }
