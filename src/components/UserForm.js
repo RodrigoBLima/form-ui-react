@@ -6,6 +6,7 @@ import Success from './Success';
 
 
 
+
 export class UserForm extends Component {
     
   state = {
@@ -77,11 +78,7 @@ export class UserForm extends Component {
       case 4:    
           return (
              <Success
-              nextStep={this.nextStep}
-              prevStep={this.prevStep}
-              handleChange={this.handleChange}
-              values={values}
-            />
+             />
           );
     }
   }
